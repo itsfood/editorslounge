@@ -1,7 +1,8 @@
 :root {
   --theme-text: white;
   --theme-color: #111111;
-  --theme-primary: var(--primary);
+  --theme-primary: rgba(229, 70, 70, 1);
+  --theme-primary-hover: rgba(205, 0, 190, 1);
   --theme-alt: #afafaf;
 }
 
@@ -78,4 +79,19 @@ nav {
 
 .text-sm {
   font-size: 10pt;
+}
+
+.btn-primary {
+  background-color: var(--theme-primary);
+  border-color: var(--theme-primary);
+  border-width: 3px;
+  border-radius: 10px;
+}
+.btn-primary:hover {
+  background-color: white;
+  border-color: var(--theme-primary-hover);
+  color: var(--theme-primary-hover);
+}
+.badge-primary {
+  background-color: var(--theme-primary);
 }
