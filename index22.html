@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon -->
+    <link rel="icon" href="./img/icon.ico" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- Personal Styling -->
+    <link rel="stylesheet" href="styles22.css" />
+
+    <title>The Editors' Lounge</title>
+</head>
+
+<body>
+    <div id="bg"></div>
+    <div id="title">
+        <img src="./img/title.png">
+    </div>
+    <main class="container">
+
+    </main>
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+
+    <!-- Onload Effects -->
+    <audio src="./audio/neonHum.mp3" autoplay id="neonHum"></audio>
+    <script>
+        // Detect safari
+        let safari;
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf('safari') != -1) {
+            if (ua.indexOf('chrome') > -1) {
+                safari = false;
+            } else {
+                safari = true;
+            }
+        }
+        var neonHum = document.querySelector("#neonHum");
+        let onload = gsap.timeline();
+        onload.pause();
+        onload.fromTo('#title', { opacity: 0 }, { opacity: 0.3, duration: 0.2, ease: 'power1' })
+        onload.fromTo('#title', { opacity: 0 }, { opacity: 0.5, duration: 0.4, ease: 'power1' })
+        onload.fromTo('#title', { opacity: 0 }, { opacity: 0.5, duration: 0.3, ease: 'power1' })
+        onload.fromTo('#title', { opacity: 0.5 }, { opacity: 1, duration: 5, ease: 'power1' })
+        if (safari) {
+            document.onclick = function () {
+                neonHum.play()
+            }
+        } else {
+            window.onload = function () {
+                onload.play();
+                document.getElementById('title').click();
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

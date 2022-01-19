@@ -1,0 +1,23 @@
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+
+  background-image: url("./img/blackbrickwall.jpg");
+  background-size: 110%;
+  background-position: center top;
+}
+
+#title {
+  width: 100vw;
+  height: fit-content;
+  text-align: center;
+}
+
+#title img {
+  height: auto;
+  width: 80vw;
+}
