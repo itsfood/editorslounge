@@ -1,3 +1,7 @@
+body {
+  background-color: black;
+}
+
 #bg {
   position: absolute;
   top: 0;
@@ -7,17 +11,22 @@
   z-index: -100;
 
   background-image: url("./img/blackbrickwall.jpg");
-  background-size: 110%;
+  background-size: 100%;
+  background-repeat: repeat-y;
   background-position: center top;
+
+  opacity: 0.5;
 }
 
 #title {
   width: 100vw;
   height: fit-content;
-  text-align: center;
 }
 
 #title img {
+  position: absolute;
+  display: block;
+
   height: auto;
   width: 80vw;
 }
