@@ -16,8 +16,8 @@
 
 <body>
   <!-- Background -->
-  <div style="width: 100vw; height: 1000px; background-image: url(./img/blackbrickwall.jpg); background-size: contain; background-repeat: repeat-y; z-index: -5; position: absolute; left:
-      0; top: 0;"></div>
+  <div style="width: 100vw; height: 1000px; background-image: url(./img/blackbrickwall.jpg); background-size: 100%; z-index: -5; position: absolute; left:
+      0; top: 0; box-shadow: inset 0 -15vh 20vh 10px black; opacity: 0.75;"></div>
   <main class="container z-index: 0">
     <!-- Title -->
     <img src="./img/title.png" width="100%" alt="Editors' Podcast Title" class="mt-5" />
@@ -46,6 +46,8 @@
             Here</a>
         </div>
       </div>
+    </div>
+    <div class="card-deck mt-4">
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">Google Podcasts</h4>
@@ -54,10 +56,7 @@
             target="_blank">Listen Here</a>
         </div>
       </div>
-    </div>
-
-    <div class="card-deck mt-4">
-      <div class="card">
+      <!-- <div class="card">
         <div class="card-body">
           <h4 class="card-title">ListenNotes</h4>
           <a class="btn btn-primary"
@@ -65,7 +64,7 @@
             target="_blank">Listen
             Here</a>
         </div>
-      </div>
+      </div> -->
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">Pocket Casts</h4>
@@ -81,7 +80,31 @@
         </div>
       </div>
     </div>
-
+    <div class="card-deck mt-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Radio Public</h4>
+          <a class="btn btn-primary" href="https://radiopublic.com/the-editors-lounge-GMgVqj" target="_blank">Listen
+            Here</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Breaker</h4>
+          <a class="btn btn-primary" href="https://www.breaker.audio/the-editors-lounge" target="_blank">Listen
+            Here</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Castbox</h4>
+          <a class="btn btn-primary"
+            href="https://castbox.fm/channel/The-Editors%27-Lounge-id4453073?utm_source=website&utm_medium=dlink&utm_campaign=web_share&utm_content=The%20Editors%27%20Lounge-CastBox_FM"
+            target="_blank">Listen
+            Here</a>
+        </div>
+      </div>
+    </div>
 
     <div class="card mt-5 mb-3">
       <div class="card-body">
@@ -109,18 +132,18 @@
     </div>
 
   </main>
-  <nav class="navbar mt-5" style="height: fit-content">
-    <div style="width: 100%">
+  <nav class="navbar mt-5 p-5 w-100" style="height: fit-content">
+    <div class="mx-auto">
       <p class="lead">The Editors' Lounge</p>
     </div>
-    <div class="row">
-      <div class="col-md">
-        <h6 class="mb-0">Copyright</h6>
-        <p class="text-sm">Website &copy;2021 The Editors' Podcast</p>
+    <div class="row w-100">
+      <div class="col">
+        <h6 class="mb-0 mx-auto" style="width: fit-content;">Copyright</h6>
+        <p class="text-sm mx-auto" style="width: fit-content;">Website &copy;2021 The Editors' Podcast</p>
       </div>
-      <div class="col-md">
-        <h6 class="mb-0">Trademark</h6>
-        <p class="text-sm">
+      <div class="col">
+        <h6 class="mb-0 mx-auto" style="width: fit-content;">Trademark</h6>
+        <p class="text-sm mx-auto" style="width: 50%; text-align: center;">
           The Editors' Lounge logo, its varients, and the "The Editors'
           Lounge" name is &trade; The Editors' Lounge.
         </p>
