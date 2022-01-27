@@ -29,28 +29,33 @@
         <img src="./img/enterhere.png" id="enterhere" style="opacity: 0;">
     </div>
     <main class="container" style="display: none; opacity: 0;">
+        <p class="lead">We talk about really unimportant shit that you should totally listen to and we laugh a lot…at
+            each other.</p>
         <div class="row">
-            <div class="col g-2 linkframe">
-                <h2>Apple Music</h2>
+            <div class="linkframe" id="apple">
+                <h2>Apple Podcasts</h2>
                 <a class="btn btn-primary" href="https://podcasts.apple.com/us/podcast/the-editors-lounge/id1566101357"
                     target="_blank">Listen Here</a>
             </div>
-            <div class="col g-2">
+        </div>
+        <div class="row">
+            <div class="linkframe" id="spotify">
                 <h2>Spotify</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, beatae reprehenderit optio expedita
-                    aliquam delectus, dignissimos ad obcaecati aut deleniti quo? Corrupti omnis suscipit doloremque
-                    earum
-                    quae blanditiis, in quas.</p>
+                <a class="btn btn-primary"
+                    href="https://open.spotify.com/show/5uq9BnJjuZgNU3vv97A0ga?si=JzayE8OzRMuSSbIxtyhiyg"
+                    target="_blank">Listen Here</a>
             </div>
-            <div class="col g-2">
+        </div>
+        <div class="row">
+            <div class="linkframe" id="google">
                 <h2>Google Podcasts</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, beatae reprehenderit optio expedita
-                    aliquam delectus, dignissimos ad obcaecati aut deleniti quo? Corrupti omnis suscipit doloremque
-                    earum
-                    quae blanditiis, in quas.</p>
+                <a class="btn btn-primary"
+                    href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy81OThlOTY0MC9wb2RjYXN0L3Jzcw"
+                    target="_blank">Listen Here</a>
             </div>
         </div>
     </main>
+    <div id="spotlight" style="opacity: 0;"></div>
 
 
     <!-- Bootstrap Bundle with Popper -->
@@ -94,6 +99,7 @@
             .to(titleimgoff, { display: 'none' })
             .fromTo(titleimg, { opacity: 0.5 }, { opacity: 1, duration: 3, ease: 'power1' }, "<")
             .to(".container", { display: 'block', opacity: 1, duration: 0.5, ease: 'power1' })
+            .to("#spotlight", { opacity: 1, duration: 2, ease: 'power1' }, "<")
             .to("#enterhere", { opacity: 1, duration: 0.5, ease: 'power1' })
         // .fromTo('body', { y: 0 }, { y: -(titleimg.getBoundingClientRect().y * 2), duration: 3, delay: 0.5, ease: "power2.inOut" }, "<")
 
@@ -115,17 +121,13 @@
             }
         }
 
-        // Scrolltrigger 
-        // let onscroll = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: "#title",
-        //         pin: true,
-        //         start: "center center",
-        //         end: "+=500",
-        //         scrub: 1
-        //     }
-        // })
-        // onscroll.to("#title", { y: '0vh', duration: 1 })
+        // Spotlight
+        let spotlight = document.querySelector('#spotlight');
+        document.onmousemove = function (e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            gsap.set(spotlight, { background: 'radial-gradient(100px 100px at ' + e.clientX + 'px ' + e.clientY + 'px, transparent, transparent 150px, rgba(0,0,0,0.6) 200px)' })
+        }
     </script>
 
 
