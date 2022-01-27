@@ -1,7 +1,14 @@
 body {
   background-color: black;
 }
-
+.wrapper {
+  display: block;
+  height: fit-content;
+}
+.wrapper#titleContainer {
+  height: 100vh;
+  overflow: hidden;
+}
 #bg {
   position: absolute;
   top: 0;
@@ -11,9 +18,11 @@ body {
   z-index: -100;
 
   background-image: url("./img/blackbrickwall.jpg");
-  background-size: 100%;
-  background-repeat: repeat-y;
+  background-size: cover;
+  background-repeat: repeat-x;
   background-position: center top;
+
+  box-shadow: inset 0px -5vh 15vh -5vh black;
 
   opacity: 0.5;
 }
@@ -29,4 +38,24 @@ body {
 
   height: auto;
   width: 80vw;
+}
+#enterhere {
+  position: absolute;
+  width: 10vw;
+  top: 85vh;
+  left: 45vw;
+}
+
+.container {
+  color: white;
+}
+
+.linkframe {
+  background-image: url("./img/frame.png");
+  background-repeat: none;
+  background-size: contain;
+  aspect-ratio: 1410 / 1671;
+  width: 300px;
+
+  padding: 6em;
 }
